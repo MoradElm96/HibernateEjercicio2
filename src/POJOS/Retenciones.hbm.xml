@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-jun-2022 21:39:47 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJOS.Retenciones" table="retenciones" catalog="examen" optimistic-lock="version">
+        <id name="nombreEmpleado" type="string">
+            <column name="NombreEmpleado" length="130" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreDepartamento" type="string">
+            <column name="NombreDepartamento" length="130" not-null="true" />
+        </property>
+        <property name="salarioBruto" type="int">
+            <column name="Salario_Bruto" not-null="true" />
+        </property>
+        <property name="retencion" type="int">
+            <column name="Retencion" not-null="true" />
+        </property>
+        <property name="salarioNeto" type="int">
+            <column name="Salario_Neto" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
